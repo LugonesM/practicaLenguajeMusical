@@ -1,0 +1,63 @@
+<!DOCTYPE HTML> 
+<html> 
+
+<head> 
+	<title> 
+		Practica de musica 
+	</title> 
+</head> 
+
+<body style = "text-align:center;"> 
+	
+	<h1 style = "color:orange;"> 
+		Practica
+	</h1> 
+	
+	<p id = "GFG_UP" style = 
+		"font-size: 15px; font-weight: bold;"> 
+	</p> 
+	
+	<button id = "button" onclick = "GFG_Fun()"> 
+		click here 
+	</button> 
+	
+	<p id = "GFG_DOWN" style = 
+		"font-size: 24px; font-weight: bold; color: black;"> 
+	</p> 
+	
+	<script> 
+		
+
+		up.innerHTML = "Click on button to select"; 
+		
+		function GFG_Fun() { 
+			var up = document.getElementById('GFG_UP'); 
+		var down = document.getElementById('GFG_DOWN'); 
+		
+		var acordes = [" acorde del primer grado", " acorde del quinto grado con septima", " acorde del cuarto grado", " acorde del quinto grado"]; 
+		acord = acordes[Math.floor(Math.random() * acordes.length)];
+
+		var estado = [" en primera inversion", " en segunda inversion", " en tercera inversion", " en fundamental"];
+		est = estado[Math.floor(Math.random() * estado.length)];
+
+		if (est==" en tercera inversion") {
+		    if (acord!=" acorde del quinto grado con septima"){
+   			   est=" en segunda inversion"}
+		}
+
+
+		var direccion = [" ascendente", " descendente"];
+		dir1 = direccion[Math.floor(Math.random() * direccion.length)] ;
+		dir2 = direccion[Math.floor(Math.random() * direccion.length)] ;
+
+		var grados = [" y supertonica", "y superdominante", "y sensible"];
+		gr = grados[Math.floor(Math.random() * grados.length)];
+
+
+		down.innerHTML = acord + est + dir1 + "<br><br>" + gr + dir2;  
+		} 
+
+	</script> 
+</body> 
+
+</html> 
